@@ -1,0 +1,39 @@
+{
+  "name": "@flow-motion-io/mobile-core",
+  "version": "0.0.5",
+  "author": "Tom Nicholson",
+  "description": "Core implementation for FlowMotion mobile apps.",
+  "license": "UNLICENSED",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "url": "git+https://github.com/flow-motion-io/npm-mobile-core.git"
+  },
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "coverage": "jest --coverage",
+    "test": "jest",
+    "clean": "RD /S /Q \"dist\" && tsc",
+    "build": " tsc",
+    "prepublishOnly": "npm run test"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.13",
+    "dotenv": "^16.5.0",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.3.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.46.4"
+  },
+  "dependencies": {
+    "axios": "^1.13.2"
+  }
+}
