@@ -1,6 +1,7 @@
 export * from './sn_config';
 export * from './sn_data';
 export * from './sn_table_api';
+export * from './sn_attachment_api';
 
 export type SNGlideDateTime = string;
 

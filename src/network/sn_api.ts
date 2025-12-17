@@ -16,7 +16,6 @@ import type {
 export const DEFAULT_BASE_URL = 'https://flowmotion.service-now.com';
 export const DEFAULT_DEV_BASE_URL = 'https://flowmotiondev.service-now.com';
 export const DEFAULT_TIMEOUT = 5000;
-
 /**
  * API is a wrapper class for making authenticated HTTP requests to ServiceNow Scripted REST APIs.
  * It supports both Basic Auth and OAuth authentication, and provides methods for all standard REST operations.
@@ -136,7 +135,7 @@ export class API implements APIBase {
 	}
 
 	/**
-	 * Checks if an OAuth access token is present.
+	 * Checks if user is authenticated.
 	 * @returns Boolean indicating whether access token is present or not.
 	 */
 

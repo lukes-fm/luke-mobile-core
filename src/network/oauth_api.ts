@@ -3,7 +3,7 @@ import { CharacterSet } from '../constants';
 import type { OAuthClient, OAuthToken } from '../types';
 import { DEFAULT_DEV_BASE_URL, type API } from './sn_api';
 
-export const DEFAULT_OAUTH_RELAY = '/api/x_flowm_mobile/fmm_oauth/oauth_relay';
+export const DEFAULT_OAUTH_RELAY = '/api/x_flowm_mobile/oauth/relay';
 export const DEFAULT_REDIRECT_URL = 'http://localhost:8100/login';
 
 export class OAuthAPI {
@@ -76,9 +76,9 @@ export class OAuthAPI {
 
 	/**
 	 * generate() uses an incorrect OAUTH API URL path, this is a temp fix
-	 * @param auth_key 
-	 * @param redirect_uri 
-	 * @returns 
+	 * @param auth_key
+	 * @param redirect_uri
+	 * @returns
 	 */
 	generateRaw = async (
 		auth_key: string,
@@ -92,10 +92,10 @@ export class OAuthAPI {
 			client_id: this.#client_id,
 			client_secret: this.#client_secret,
 			code: auth_key
-		}
-		
+		};
+
 		return (await this.#api.postToken<OAuthToken>(params, { config: { omitApiPath: false } })).data;
-	}
+	};
 
 	/**
 	 * Performs an OAuth Token refresh after a token has been generated.
