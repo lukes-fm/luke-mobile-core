@@ -11,7 +11,7 @@ const testBasicUser = {
  */
 
 test('Get the API endpoint generated from the construction arguments', () => {
-	const path = '/api/x_flowm_mobile/fmm_oauth';
+	const path = '/api/x_flowm_mobile/oauth';
 	const api = new API(path);
 	expect(api.route()).toBe(DEFAULT_DEV_BASE_URL + path);
 });

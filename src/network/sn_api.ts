@@ -219,7 +219,7 @@ export class API implements APIBase {
 	 * @returns An API response, a successful response includes the response body,
 	 * an errored response includes an error code and message.
 	 */
-	post<T>(path: string, body: object, options: APIRequestOptions = {}): Promise<APIResponse<T>> {
+	post<T>(path: string, body: object | Blob, options: APIRequestOptions = {}): Promise<APIResponse<T>> {
 		const method: RESTMethods = 'POST';
 		const url = options.config?.omitApiPath ? path : `${this.API_PATH}${path}`;
 		const opts: APIRequestOptions = { url, method, data: body, ...options };
