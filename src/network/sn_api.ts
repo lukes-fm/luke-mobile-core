@@ -135,10 +135,9 @@ export class API implements APIBase {
 	}
 
 	/**
-	 * Checks if user is authenticated.
-	 * @returns Boolean indicating whether access token is present or not.
+	 * Checks if user is authenticated with OAuth or basic credentials.
+	 * @returns Boolean indicating whether user is authenticated or not.
 	 */
-
 	isAuthenticated(): boolean {
 		if (this.#isOAuth && this.#credentials && Object.hasOwn(this.#credentials, 'access_token')) {
 			return true;
