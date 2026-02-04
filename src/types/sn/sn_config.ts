@@ -32,6 +32,12 @@ export type SNField = {
 export type SNForm = {
 	sysId: string;
 	label: string;
+	sections: SNSection[];
+};
+
+export type SNSection = {
+	sysId: string;
+	name: string;
 	elements: SNElement[];
 };
 
@@ -43,8 +49,10 @@ export type SNList = {
 
 export type SNElement = {
 	sysId: string;
-	position: number;
 	element: string;
+	position: number;
+	type: string;
+	internalType: string;
 };
 
 export type SNFieldType = 'integer' | 'choice' | ''; // ...
